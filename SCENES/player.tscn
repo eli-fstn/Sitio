@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3njd6shg7d0j"]
 
-[ext_resource type="Script" uid="uid://crgu6kqqoyaqp" path="res://SCRIPTS/player.gd" id="1_ai16o"]
+[ext_resource type="Script" path="res://SCRIPTS/player.gd" id="1_ai16o"]
 [ext_resource type="Texture2D" uid="uid://7aqmlvspfqbs" path="res://ASSETS/Character/John Gamejam - Spritesheet.png" id="2_o7tti"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8es0"]

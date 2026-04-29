@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="GAME JAM NAMIN"
+config/name="Game Jam"
 run/main_scene="uid://bljl8c3xam018"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
