@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c3njd6shg7d0j"]
 
-[ext_resource type="Script" path="res://SCRIPTS/player.gd" id="1_ai16o"]
 [ext_resource type="Texture2D" uid="uid://7aqmlvspfqbs" path="res://ASSETS/Character/John Gamejam - Spritesheet.png" id="2_o7tti"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8es0"]
@@ -185,7 +184,6 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=1748871284]
 scale = Vector2(2, 2)
-script = ExtResource("1_ai16o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1443416348]
 texture_filter = 1
