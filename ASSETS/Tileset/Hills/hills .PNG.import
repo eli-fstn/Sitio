@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8p72bhp6ldj7"
-path="res://.godot/imported/Basic Grass Biom things 1.png-d5deb314ff061437852a6d19338809a3.ctex"
+uid="uid://cxl1y1qfwdtlo"
+path="res://.godot/imported/hills .PNG-480dd6ab1dad3a9181a352af78d261e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemap/Basic Grass Biom things 1.png"
-dest_files=["res://.godot/imported/Basic Grass Biom things 1.png-d5deb314ff061437852a6d19338809a3.ctex"]
+source_file="res://ASSETS/Tileset/Hills/hills .PNG"
+dest_files=["res://.godot/imported/hills .PNG-480dd6ab1dad3a9181a352af78d261e7.ctex"]
 
 [params]
 

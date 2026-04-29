@@ -4,5 +4,11 @@
 
 [node name="main" type="Node2D" unique_id=1257265571]
 
+<<<<<<< HEAD
+[node name="Sorted Layers" type="Node" parent="." unique_id=943974208]
+
+[node name="Player" parent="Sorted Layers" unique_id=1748871284 instance=ExtResource("1_xh1h4")]
+=======
 [node name="Player" parent="." unique_id=1748871284 instance=ExtResource("1_xh1h4")]
+>>>>>>> e2e53d603f161390a4e1e35196f153fbae35f01c
 position = Vector2(574, 315)
