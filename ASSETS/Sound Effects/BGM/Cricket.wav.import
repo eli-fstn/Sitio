@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://cmk0n0l2fnvq0"
+=======
+uid="uid://b3bwpc7lqcbsh"
+>>>>>>> 9a6794a0983532abddfbf204acf657cb421e83fe
 path="res://.godot/imported/Cricket.wav-4ca19e432b79599a660deb1c5a7fec0d.sample"
 
 [deps]
