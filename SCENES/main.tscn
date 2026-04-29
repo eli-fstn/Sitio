@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c3njd6shg7d0j" path="res://SCENES/player.tscn" id="1_xh1h4"]
 
-[node name="main" type="Node2D" unique_id=1257265571]
+[node name="World" type="Node2D" unique_id=1257265571]
 
 [node name="Player" parent="." unique_id=1748871284 instance=ExtResource("1_xh1h4")]
 position = Vector2(574, 315)
+
+[node name="Sorted Layer" type="Node" parent="." unique_id=943974208]
