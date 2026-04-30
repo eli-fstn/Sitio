@@ -195,6 +195,7 @@ tags = {
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=753086181]
+texture_filter = 1
 script = ExtResource("1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1027666621]
