@@ -25,6 +25,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="sorted layer" unique_id=753086181 instance=ExtResource("2_5a7ea")]
 position = Vector2(192.75, 240)
+collision_mask = 6
 
 [node name="world_border" type="TileMapLayer" parent="sorted layer" unique_id=502724953]
 y_sort_enabled = true
