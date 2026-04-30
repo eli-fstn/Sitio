@@ -1395,7 +1395,11 @@ texture = ExtResource("6_dyg37")
 3:15/0 = 0
 4:15/0 = 0
 2:0/size_in_atlas = Vector2i(3, 3)
+2:0/next_alternative_id = 3
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.4, 3.1999998, -3.1999998, 1.6000004, 1.6000004, 1.6000004, 4.8, 1.6000004, 8, 3.1999998, 3.1999998, 8, 3.1999998, 12.800001, 4.8, 17.6, 4.8, 22.4, -4.8, 20.800001, -4.8, 17.6, -4.8, 12.800001, -3.1999998, 9.6)
+2:0/1 = 1
+2:0/2 = 2
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n55sg"]
 texture = ExtResource("7_8h72g")
@@ -1417,6 +1421,7 @@ texture = ExtResource("7_8h72g")
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, 8)
 0:0/0/y_sort_origin = 5
+0:0/0/terrain_set = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsefi"]
 resource_name = "debug"
