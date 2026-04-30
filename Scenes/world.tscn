@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://du67jjcoup7hi" path="res://Scenes/final_enemy.tscn" id="4_5ukr8"]
 [ext_resource type="AudioStream" uid="uid://cx2tbx7yxyk6m" path="res://Assets/Sound Effects/BGM/Cricket.wav" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://bjsskmiesxx71" path="res://Scenes/crow_area.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://c15fm8u3u5he1" path="res://Scenes/dog_area.tscn" id="7_o06y3"]
 
 [node name="world" type="Node2D" unique_id=40815832]
 scale = Vector2(4, 4)
@@ -60,3 +61,6 @@ scale = Vector2(1.2, 1.2)
 collision_layer = 8
 collision_mask = 0
 motion_mode = 1
+
+[node name="Dog_area" parent="." unique_id=1356017970 instance=ExtResource("7_o06y3")]
+position = Vector2(939, 268.5)
