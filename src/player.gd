@@ -1,10 +1,14 @@
 extends CharacterBody2D
 
-const speed = 150
+const speed = 200
 var last_direction: Vector2 = Vector2.DOWN
 var hitbox_offset: Vector2
 
 @onready var sprite = $AnimatedSprite2D
+@onready var cricket_sounds = $AudioStreamPlayer2D
+
+func _ready() -> void:
+	cricket_sounds.play()
 
 func _physics_process(_delta) -> void:
 	process_movement()
