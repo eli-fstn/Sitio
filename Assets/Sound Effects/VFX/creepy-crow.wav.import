@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bihkykcvose1w"
+path="res://.godot/imported/creepy-crow.wav-6c7bc67a91f1c936b5d654c35cb478e1.sample"
+
+[deps]
+
+source_file="res://Assets/Sound Effects/VFX/creepy-crow.wav"
+dest_files=["res://.godot/imported/creepy-crow.wav-6c7bc67a91f1c936b5d654c35cb478e1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjsskmiesxx71"]
+
+[ext_resource type="Script" uid="uid://bva74w5iuc83s" path="res://src/crow_area.gd" id="1_royny"]
+[ext_resource type="AudioStream" uid="uid://bihkykcvose1w" path="res://Assets/Sound Effects/VFX/creepy-crow.wav" id="2_dsmd1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnoah"]
+size = Vector2(463, 430)
+
+[node name="Crow_area" type="Area2D" unique_id=120540040]
+script = ExtResource("1_royny")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=789638717]
+stream = ExtResource("2_dsmd1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=199472948]
+shape = SubResource("RectangleShape2D_tnoah")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
