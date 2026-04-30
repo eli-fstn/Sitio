@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 200
+const speed = 300
 var last_direction: Vector2 = Vector2.DOWN
 var hitbox_offset: Vector2
 

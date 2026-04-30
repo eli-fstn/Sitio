@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dqp5l3joeo6cr" path="res://src/world.gd" id="1_5a7ea"]
 [ext_resource type="TileSet" uid="uid://cpyesg85xmu32" path="res://Assets/Tileset/config/tiles.tres" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://dll30r7u78o0n" path="res://Scenes/player.tscn" id="2_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://du67jjcoup7hi" path="res://Scenes/final_enemy.tscn" id="4_5ukr8"]
 [ext_resource type="AudioStream" uid="uid://cx2tbx7yxyk6m" path="res://Assets/Sound Effects/BGM/Cricket.wav" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://bjsskmiesxx71" path="res://Scenes/crow_area.tscn" id="5_fo5ed"]
 
@@ -28,8 +29,9 @@ layer_3/tile_data = PackedInt32Array(1572868, 65536, 1, 1572869, 65536, 1, 15728
 y_sort_enabled = true
 
 [node name="Player" parent="sorted layer" unique_id=753086181 instance=ExtResource("2_5a7ea")]
-position = Vector2(127.25, 240)
+position = Vector2(132.75, 244)
 collision_mask = 6
+motion_mode = 1
 
 [node name="world_border" type="TileMapLayer" parent="sorted layer" unique_id=502724953]
 y_sort_enabled = true
@@ -48,5 +50,13 @@ autoplay = true
 bus = &"Cricket_BGM"
 
 [node name="Crow_area" parent="." unique_id=120540040 instance=ExtResource("5_fo5ed")]
-position = Vector2(564.5, 310)
+position = Vector2(1826.25, 365.75)
 scale = Vector2(0.5, 0.5)
+
+[node name="Final_Enemy" parent="." unique_id=660707547 instance=ExtResource("4_5ukr8")]
+texture_filter = 1
+position = Vector2(2233, -273)
+scale = Vector2(1.2, 1.2)
+collision_layer = 8
+collision_mask = 0
+motion_mode = 1

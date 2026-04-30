@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://bljl8c3xam018"]
 
 [ext_resource type="PackedScene" uid="uid://dh0pj6bxewpy3" path="res://Scenes/world.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://c15fm8u3u5he1" path="res://Scenes/dog_area.tscn" id="2_bo1nx"]
 
 [node name="main" type="Node2D" unique_id=541302062]
 
 [node name="world" parent="." unique_id=40815832 instance=ExtResource("1_jjgbg")]
-position = Vector2(-271, 7)
+position = Vector2(-3667, -770)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2052978766]
+color = Color(0.70796657, 0.7079665, 0.7079665, 1)
+
+[node name="Dog_area" parent="." unique_id=1356017970 instance=ExtResource("2_bo1nx")]
+position = Vector2(134, 326)
