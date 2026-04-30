@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bb78n616mmo10"]
+[gd_scene format=4 uid="uid://dh0pj6bxewpy3"]
 
 [ext_resource type="TileSet" uid="uid://cpyesg85xmu32" path="res://Assets/Tileset/config/tiles.tres" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://dll30r7u78o0n" path="res://Scenes/player.tscn" id="2_5a7ea"]
@@ -24,7 +24,7 @@ layer_3/tile_data = PackedInt32Array(1572868, 65536, 1, 1572869, 65536, 1, 15728
 y_sort_enabled = true
 
 [node name="Player" parent="sorted layer" unique_id=753086181 instance=ExtResource("2_5a7ea")]
-position = Vector2(192.75, 240)
+position = Vector2(141.5, 233.25)
 
 [node name="world_border" type="TileMapLayer" parent="sorted layer" unique_id=502724953]
 y_sort_enabled = true
