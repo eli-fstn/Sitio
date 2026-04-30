@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://njguvvcrek77" path="res://Assets/Sound Effects/VFX/dog-barking.wav" id="1_t3ux4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gt35m"]
-size = Vector2(622.5, 390.5)
+size = Vector2(172.0625, 106.8125)
 
 [node name="Dog_area" type="Area2D" unique_id=1356017970]
 script = ExtResource("1_gt35m")
@@ -14,7 +14,6 @@ stream = ExtResource("1_t3ux4")
 bus = &"Dog_VFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=425553570]
-position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_gt35m")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
