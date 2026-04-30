@@ -187,7 +187,6 @@ animations = [{
 radius = 3.5
 
 [node name="Player" type="CharacterBody2D" unique_id=753086181]
-scale = Vector2(2, 2)
 script = ExtResource("1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1027666621]
@@ -198,7 +197,8 @@ autoplay = "idle_front"
 frame_progress = 0.14887942
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1123872883]
-position = Vector2(0, 2.5)
 shape = SubResource("CircleShape2D_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1209742278]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

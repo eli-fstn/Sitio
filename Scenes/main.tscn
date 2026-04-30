@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://dbiflo2yrd3hf"]
 
-[ext_resource type="PackedScene" uid="uid://dll30r7u78o0n" path="res://Scenes/player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bb78n616mmo10" path="res://Scenes/world.tscn" id="1_jjgbg"]
 
 [node name="main" type="Node2D" unique_id=541302062]
 
-[node name="Sorted Layers" type="Node" parent="." unique_id=1950002202]
-
-[node name="Player" parent="Sorted Layers" unique_id=696442718 instance=ExtResource("1")]
-position = Vector2(449, -280)
+[node name="world" parent="." unique_id=40815832 instance=ExtResource("1_jjgbg")]
+position = Vector2(-271, 7)
