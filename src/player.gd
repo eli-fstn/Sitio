@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
-const speed = 1000
+const speed = 400
 var last_direction: Vector2 = Vector2.DOWN
 var hitbox_offset: Vector2
 
 @onready var sprite = $AnimatedSprite2D
+@onready var footsteps = $AudioStreamPlayer2D
 
 func _physics_process(_delta) -> void:
 	process_movement()
@@ -22,8 +23,12 @@ func process_movement() -> void:
 	
 func process_animation() -> void:
 	if velocity != Vector2.ZERO:
+		if not footsteps.playing:
+			footsteps.play()
 		play_animation("walk", last_direction)
 	else:
+		if footsteps.playing:
+			footsteps.stop()
 		play_animation("idle", last_direction)
 
 func play_animation(prefix: String, dir: Vector2) -> void:

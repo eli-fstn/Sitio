@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crgu6kqqoyaqp" path="res://src/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://7aqmlvspfqbs" path="res://Assets/Character/John Gamejam - Spritesheet.png" id="2"]
+[ext_resource type="AudioStream" path="res://Assets/Sound Effects/VFX/footsteps-player.wav" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8es0"]
 atlas = ExtResource("2")
@@ -189,6 +190,7 @@ size = Vector2(10, 6)
 [node name="Player" type="CharacterBody2D" unique_id=753086181]
 texture_filter = 1
 collision_mask = 6
+motion_mode = 1
 script = ExtResource("1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1027666621]
@@ -202,6 +204,11 @@ position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1209742278]
+zoom = Vector2(0.7, 0.7)
 limit_enabled = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2127707363]
+stream = ExtResource("3_6t5aa")
+bus = &"Footsteps_SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
