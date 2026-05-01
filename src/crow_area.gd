@@ -1,9 +1,8 @@
 extends Area2D
 
 @onready var crow_sound = $AudioStreamPlayer2D
-var has_entered = false
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player" and not has_entered:
-		has_entered = true
+	if body.name == "Player":
 		crow_sound.play()
+		$CollisionShape2D.set_deferred("disabled", true)
