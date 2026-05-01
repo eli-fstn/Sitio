@@ -31,6 +31,18 @@ tile_data = PackedInt32Array(0, 131077, 65536)
 [sub_resource type="TileMapPattern" id="TileMapPattern_khap0"]
 tile_data = PackedInt32Array(0, 5, 65537)
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_lsefi"]
+tile_data = PackedInt32Array(0, 15, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_dyg37"]
+tile_data = PackedInt32Array(0, 131087, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_8h72g"]
+tile_data = PackedInt32Array(0, 65551, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ibr5c"]
+tile_data = PackedInt32Array(0, 15, 4)
+
 [sub_resource type="TileMapPattern" id="TileMapPattern_02756"]
 tile_data = PackedInt32Array(0, 65541, 0)
 
@@ -484,6 +496,7 @@ texture = ExtResource("4_lsefi")
 1:1/0/terrains_peering_bit/top_side = 4
 1:1/0/terrains_peering_bit/top_right_corner = 4
 1:1/1 = 1
+1:1/1/modulate = Color(0.6431373, 0.7764706, 0.627451, 1)
 2:1/0 = 0
 2:1/0/terrain_set = 0
 2:1/0/terrain = 4
@@ -1405,23 +1418,6 @@ texture = ExtResource("4_b3rvt")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3cw8r"]
 texture = ExtResource("6_dyg37")
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-3:8/0 = 0
 1:13/0 = 0
 2:13/0 = 0
 4:14/0 = 0
@@ -1437,6 +1433,8 @@ texture = ExtResource("6_dyg37")
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.4, 3.1999998, -3.1999998, 1.6000004, 1.6000004, 1.6000004, 4.8, 1.6000004, 8, 3.1999998, 3.1999998, 8, 3.1999998, 12.800001, 4.8, 17.6, 4.8, 22.4, -4.8, 20.800001, -4.8, 17.6, -4.8, 12.800001, -3.1999998, 9.6)
 2:0/1 = 1
 2:0/2 = 2
+1:4/size_in_atlas = Vector2i(5, 4)
+1:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n55sg"]
 texture = ExtResource("7_8h72g")
@@ -1674,7 +1672,6 @@ texture = ExtResource("5_foobm")
 4:0/0 = 0
 4:0/1 = 1
 4:0/1/modulate = Color(0.8039216, 0.8901961, 0.7921569, 1)
-4:0/1/z_index = 1
 4:0/1/y_sort_origin = -24
 4:0/1/physics_layer_1/polygon_0/points = PackedVector2Array(-64, -32, 64, -32, 64, 32, -64, 32)
 4:0/2 = 2
@@ -2278,3 +2275,7 @@ pattern_9 = SubResource("TileMapPattern_1bwav")
 pattern_10 = SubResource("TileMapPattern_ku0x4")
 pattern_11 = SubResource("TileMapPattern_fd033")
 pattern_12 = SubResource("TileMapPattern_khap0")
+pattern_13 = SubResource("TileMapPattern_lsefi")
+pattern_14 = SubResource("TileMapPattern_dyg37")
+pattern_15 = SubResource("TileMapPattern_8h72g")
+pattern_16 = SubResource("TileMapPattern_ibr5c")
