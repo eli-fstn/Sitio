@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bihkykcvose1w"
-path="res://.godot/imported/creepy-crow.wav-6c7bc67a91f1c936b5d654c35cb478e1.sample"
+path="res://.godot/imported/creepy-crow.wav-fbbaa251b7d69ba6e0e82f8b2486a6a9.sample"
 
 [deps]
 
-source_file="res://Assets/Sound Effects/VFX/creepy-crow.wav"
-dest_files=["res://.godot/imported/creepy-crow.wav-6c7bc67a91f1c936b5d654c35cb478e1.sample"]
+source_file="res://Assets/Sound Effects/SFX/creepy-crow.wav"
+dest_files=["res://.godot/imported/creepy-crow.wav-fbbaa251b7d69ba6e0e82f8b2486a6a9.sample"]
 
 [params]
 

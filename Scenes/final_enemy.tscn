@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://du67jjcoup7hi"]
 
 [ext_resource type="Texture2D" uid="uid://thp1cqv6oewb" path="res://Assets/Character/Manananggal.png" id="1_1wyn6"]
-[ext_resource type="Script" path="res://src/final_enemy.gd" id="1_mvoqa"]
+[ext_resource type="Script" uid="uid://jbx7jciry3r4" path="res://src/final_enemy.gd" id="1_mvoqa"]
+[ext_resource type="AudioStream" uid="uid://c3odgk5bwbogr" path="res://Assets/Sound Effects/SFX/wings-flapping.wav" id="3_mv71a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wyn6"]
 atlas = ExtResource("1_1wyn6")
@@ -147,22 +148,32 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ka73i"]
-radius = 5.0990195
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvoqa"]
+size = Vector2(8, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2be8r"]
 radius = 150.0
 
 [node name="Final_Enemy" type="CharacterBody2D" unique_id=660707547]
+collision_layer = 2
+motion_mode = 1
 script = ExtResource("1_mvoqa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=177045082]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_hb0pw")
 animation = &"walk_front"
 autoplay = "walk_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1528666103]
-shape = SubResource("CircleShape2D_ka73i")
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_mvoqa")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=994781830]
+stream = ExtResource("3_mv71a")
+volume_db = 5.832
+autoplay = true
+bus = &"WingsFlapping_SFX"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2016761608]
 

@@ -1430,7 +1430,7 @@ texture = ExtResource("6_dyg37")
 2:0/size_in_atlas = Vector2i(3, 3)
 2:0/next_alternative_id = 3
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.4, 3.1999998, -3.1999998, 1.6000004, 1.6000004, 1.6000004, 4.8, 1.6000004, 8, 3.1999998, 3.1999998, 8, 3.1999998, 12.800001, 4.8, 17.6, 4.8, 22.4, -4.8, 20.800001, -4.8, 17.6, -4.8, 12.800001, -3.1999998, 9.6)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/1 = 1
 2:0/2 = 2
 1:4/size_in_atlas = Vector2i(5, 4)
@@ -2227,10 +2227,10 @@ texture = ExtResource("12_x3jk3")
 0:8/0 = 0
 
 [resource]
-physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
 physics_layer_1/collision_layer = 4
-physics_layer_1/collision_mask = 0
+physics_layer_1/collision_mask = 3
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Hill Grass"
 terrain_set_0/terrain_0/color = Color(0.03529412, 0.4392157, 0.2509804, 1)

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://njguvvcrek77"
-path="res://.godot/imported/dog-barking.wav-76764efda1e9f5c8916ec34b4266c0f0.sample"
+path="res://.godot/imported/dog-barking.wav-38d418dabc8ba912f3a23e1794ffcb84.sample"
 
 [deps]
 
-source_file="res://Assets/Sound Effects/VFX/dog-barking.wav"
-dest_files=["res://.godot/imported/dog-barking.wav-76764efda1e9f5c8916ec34b4266c0f0.sample"]
+source_file="res://Assets/Sound Effects/SFX/dog-barking.wav"
+dest_files=["res://.godot/imported/dog-barking.wav-38d418dabc8ba912f3a23e1794ffcb84.sample"]
 
 [params]
 
