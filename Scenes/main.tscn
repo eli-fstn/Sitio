@@ -5,7 +5,7 @@
 [node name="main" type="Node2D" unique_id=541302062]
 
 [node name="world" parent="." unique_id=40815832 instance=ExtResource("1_jjgbg")]
-position = Vector2(-3667, -770)
+position = Vector2(-3762, -720)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2052978766]
 color = Color(0.70796657, 0.7079665, 0.7079665, 1)

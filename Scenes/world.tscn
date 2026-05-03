@@ -2312,7 +2312,7 @@ layer_3/tile_data = PackedInt32Array(1572868, 65536, 1, 1572869, 65536, 1, 15728
 y_sort_enabled = true
 
 [node name="Player" parent="sorted layer" unique_id=753086181 instance=ExtResource("2_5a7ea")]
-position = Vector2(144.5, 233)
+position = Vector2(2551, -1235.5)
 
 [node name="world_border" type="TileMapLayer" parent="sorted layer" unique_id=502724953]
 y_sort_enabled = true
