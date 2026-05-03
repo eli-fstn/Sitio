@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://crgu6kqqoyaqp" path="res://src/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://7aqmlvspfqbs" path="res://Assets/Character/John Gamejam - Spritesheet.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://yxcyqwtnbg43" path="res://Assets/Character/Attack_JohnGamejam.png" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://be7e2lhyjiman" path="res://src/hurtbox.gd" id="4_vgqql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_6t5aa")
@@ -297,11 +298,15 @@ tags = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3smsa"]
 size = Vector2(20, 6)
 
-[node name="Player" type="CharacterBody2D" unique_id=753086181]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
+size = Vector2(6, 6)
+
+[node name="Player" type="CharacterBody2D" unique_id=753086181 node_paths=PackedStringArray("hitbox_shape")]
 texture_filter = 1
 collision_mask = 6
 motion_mode = 1
 script = ExtResource("1")
+hitbox_shape = NodePath("Hitbox/HitboxShape")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1027666621]
 texture_filter = 1
@@ -322,9 +327,22 @@ stream = SubResource("AudioStreamWAV_cvnsp")
 bus = &"Footsteps_SFX"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=568754466]
+collision_layer = 2
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1213385648]
-position = Vector2(0, 11)
+[node name="HitboxShape" type="CollisionShape2D" parent="Hitbox" unique_id=1213385648]
 shape = SubResource("RectangleShape2D_3smsa")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=675447480]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("4_vgqql")
+
+[node name="HurtboxShape" type="CollisionShape2D" parent="Hurtbox" unique_id=749783901]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_6t5aa")
+
+[node name="AttackPivot" type="Node2D" parent="." unique_id=876053499]
+position = Vector2(-10, 0)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
