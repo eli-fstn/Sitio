@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bpjl07rgypfqi"]
+
+[ext_resource type="Script" uid="uid://t835272kxg6k" path="res://src/ranged_enemy.gd" id="1_afpow"]
+[ext_resource type="Texture2D" uid="uid://rsfk0acf15pd" path="res://Assets/Character/duwende_aswang.png" id="1_hghv2"]
+[ext_resource type="Script" uid="uid://be7e2lhyjiman" path="res://src/hurtbox.gd" id="2_1f0kj"]
+[ext_resource type="PackedScene" uid="uid://bd6jacjgrbpqq" path="res://Scenes/projectile.tscn" id="2_287tu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
+size = Vector2(12, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hghv2"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_287tu"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0830c"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghaa6"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f0kj"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afpow"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_287tu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hghv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_287tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0830c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghaa6")
+}],
+"loop": false,
+"name": &"die",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f0kj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afpow")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghaa6"]
+size = Vector2(19, 25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_afpow"]
+radius = 91.0
+
+[node name="enemy" type="CharacterBody2D" unique_id=220594689]
+collision_layer = 128
+collision_mask = 7
+script = ExtResource("1_afpow")
+projectile = ExtResource("2_287tu")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1943933521]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_287tu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=596516986]
+sprite_frames = SubResource("SpriteFrames_287tu")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.56480044
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=649502104]
+collision_layer = 64
+collision_mask = 16
+script = ExtResource("2_1f0kj")
+
+[node name="HurtboxShape" type="CollisionShape2D" parent="Hurtbox" unique_id=1552296721]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_ghaa6")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=1689413175]
+wait_time = 1.5
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=563005241]
+
+[node name="Sight" type="Area2D" parent="." unique_id=270815830]
+metadata/_edit_group_ = true
+
+[node name="SightShape" type="CollisionShape2D" parent="Sight" unique_id=2144347311]
+shape = SubResource("CircleShape2D_afpow")
+
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]

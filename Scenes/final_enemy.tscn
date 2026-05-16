@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://thp1cqv6oewb" path="res://Assets/Character/Manananggal.png" id="1_1wyn6"]
 [ext_resource type="Script" uid="uid://jbx7jciry3r4" path="res://src/final_enemy.gd" id="1_mvoqa"]
 [ext_resource type="AudioStream" uid="uid://c3odgk5bwbogr" path="res://Assets/Sound Effects/SFX/wings-flapping.wav" id="3_mv71a"]
+[ext_resource type="Script" uid="uid://be7e2lhyjiman" path="res://src/hurtbox.gd" id="4_tolcy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wyn6"]
 atlas = ExtResource("1_1wyn6")
@@ -154,6 +155,9 @@ size = Vector2(8, 8)
 [sub_resource type="CircleShape2D" id="CircleShape2D_2be8r"]
 radius = 150.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mv71a"]
+size = Vector2(28, 15)
+
 [node name="Final_Enemy" type="CharacterBody2D" unique_id=660707547]
 collision_layer = 2
 motion_mode = 1
@@ -175,10 +179,20 @@ volume_db = 5.832
 autoplay = true
 bus = &"WingsFlapping_SFX"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2016761608]
+[node name="Sight" type="Area2D" parent="." unique_id=2016761608]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=322698460]
+[node name="SightShape" type="CollisionShape2D" parent="Sight" unique_id=322698460]
 shape = SubResource("CircleShape2D_2be8r")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1893903821]
+position = Vector2(0, 2)
+collision_layer = 64
+collision_mask = 16
+script = ExtResource("4_tolcy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=226696189]
+shape = SubResource("RectangleShape2D_mv71a")
+
+[connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Sight" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
