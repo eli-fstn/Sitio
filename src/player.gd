@@ -4,35 +4,30 @@ const speed = 400
 var last_direction: Vector2 = Vector2.DOWN
 var hitbox_offset: Vector2
 
+@onready var health_bar: Node2D = $"health_bar"
 @onready var sprite = $AnimatedSprite2D
 @onready var footsteps = $AudioStreamPlayer2D
 @export var hitbox: Area2D
 @export var max_health := 3
 
 var is_attacking = false
-var health = 0
+var health = 100
 
 func _ready():
-	health = max_health
 	hitbox_offset = hitbox.position
 	
 func take_damage(amount):
 	health -= amount
-	print("Player HP: ", health)
+	health_bar.update_health(health)
+	
 	if health <= 0:
 		die()
 		
 func die():
-	print("Player died")
-	
-	# 1. Load and instance the scene
 	var death_screen_scene = load("res://Scenes/death_screen.tscn")
 	var death_screen_instance = death_screen_scene.instantiate()
 	
-	# 2. Add it to the CURRENT active scene tree so it aligns with your screen
 	get_tree().current_scene.add_child(death_screen_instance)
-	
-	# 3. Pause the game AFTER adding the child
 	get_tree().paused = true
 
 func _physics_process(_delta) -> void:

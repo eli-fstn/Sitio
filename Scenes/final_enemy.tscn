@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://thp1cqv6oewb" path="res://Assets/Character/Manananggal.png" id="1_1wyn6"]
 [ext_resource type="Script" uid="uid://jbx7jciry3r4" path="res://src/final_enemy.gd" id="1_mvoqa"]
 [ext_resource type="AudioStream" uid="uid://c3odgk5bwbogr" path="res://Assets/Sound Effects/SFX/wings-flapping.wav" id="3_mv71a"]
-[ext_resource type="Script" uid="uid://be7e2lhyjiman" path="res://src/hurtbox.gd" id="4_tolcy"]
+[ext_resource type="Script" path="res://src/hurtbox.gd" id="4_tolcy"]
+[ext_resource type="PackedScene" uid="uid://bkwedud77w68m" path="res://Scenes/health_bar.tscn" id="5_xouri"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wyn6"]
 atlas = ExtResource("1_1wyn6")
@@ -192,6 +193,10 @@ script = ExtResource("4_tolcy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=226696189]
 shape = SubResource("RectangleShape2D_mv71a")
+
+[node name="health_bar" parent="." unique_id=1691589149 instance=ExtResource("5_xouri")]
+position = Vector2(-16, -21)
+scale = Vector2(1, 0.5)
 
 [connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_area_2d_body_exited"]

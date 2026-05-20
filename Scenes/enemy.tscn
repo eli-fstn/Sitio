@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://rsfk0acf15pd" path="res://Assets/Character/duwende_aswang.png" id="1_hghv2"]
 [ext_resource type="Script" uid="uid://be7e2lhyjiman" path="res://src/hurtbox.gd" id="2_1f0kj"]
 [ext_resource type="PackedScene" uid="uid://bd6jacjgrbpqq" path="res://Scenes/projectile.tscn" id="2_287tu"]
+[ext_resource type="PackedScene" uid="uid://bkwedud77w68m" path="res://Scenes/health_bar.tscn" id="5_0830c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_287tu"]
 size = Vector2(12, 18)
@@ -69,9 +70,12 @@ size = Vector2(19, 25)
 [sub_resource type="CircleShape2D" id="CircleShape2D_afpow"]
 radius = 91.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0830c"]
+size = Vector2(12, 24)
+
 [node name="enemy" type="CharacterBody2D" unique_id=220594689]
 collision_layer = 128
-collision_mask = 7
+collision_mask = 6
 script = ExtResource("1_afpow")
 projectile = ExtResource("2_287tu")
 
@@ -105,5 +109,18 @@ metadata/_edit_group_ = true
 [node name="SightShape" type="CollisionShape2D" parent="Sight" unique_id=2144347311]
 shape = SubResource("CircleShape2D_afpow")
 
+[node name="health_bar" parent="." unique_id=1691589149 instance=ExtResource("5_0830c")]
+position = Vector2(-8, -23)
+scale = Vector2(0.5, 0.5)
+
+[node name="HitArea" type="Area2D" parent="." unique_id=2071814159]
+position = Vector2(0, 2)
+collision_layer = 128
+metadata/_edit_group_ = true
+
+[node name="HitAreaShape" type="CollisionShape2D" parent="HitArea" unique_id=1651444084]
+shape = SubResource("RectangleShape2D_0830c")
+
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]
