@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://drl8dglnk512b"]
+
+[ext_resource type="Script" uid="uid://52af30uxgpwl" path="res://src/death_screen.gd" id="1_mre31"]
+[ext_resource type="Texture2D" uid="uid://nwkcvjduseri" path="res://Assets/deathScreen_logo.png" id="1_teq7e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7v3x4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_teq7e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mre31"]
+
+[node name="Control" type="CanvasLayer" unique_id=1099471918]
+process_mode = 2
+script = ExtResource("1_mre31")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=623011320]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.4627451)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1896185207]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.0
+offset_top = -225.0
+offset_right = 305.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_teq7e")
+
+[node name="TryAgainBtn" type="Button" parent="." unique_id=1510140520]
+process_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = 46.0
+offset_right = 156.0
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_pressed_color = Color(0.79607844, 0.10980392, 0, 1)
+theme_override_colors/font_hover_color = Color(0.41568628, 0.23529412, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7v3x4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_teq7e")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mre31")
+text = "TRY AGAIN"
+
+[node name="ExitBtn" type="Button" parent="." unique_id=1327832798]
+process_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = 136.0
+offset_right = 156.0
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_pressed_color = Color(0.79607844, 0.10980392, 0, 1)
+theme_override_colors/font_hover_color = Color(0.41568628, 0.23529412, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7v3x4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_teq7e")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mre31")
+text = "EXIT"
+
+[connection signal="pressed" from="TryAgainBtn" to="." method="_on_try_again_btn_pressed"]
