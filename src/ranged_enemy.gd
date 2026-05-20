@@ -32,3 +32,9 @@ func shoot():
 
 func _on_attack_cooldown_timeout() -> void:
 	can_attack = true
+
+
+func _on_hit_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		print(body.name)
+		body.take_damage(10)
