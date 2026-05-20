@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://q2xqrdm5hd0a"]
+
+[ext_resource type="Texture2D" uid="uid://bvxr6lqavjuek" path="res://Assets/Tileset/Environmental Objects/Plants/Tileset 13.png" id="1_fev61"]
+[ext_resource type="Texture2D" uid="uid://dyckw3t7no3ss" path="res://Assets/Tileset/Environmental Objects/Plants/IMG_1435.PNG" id="2_fmo00"]
+
+[node name="flower" type="Area2D" unique_id=42172361]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1257694947]
+z_index = -1
+y_sort_enabled = true
+texture = ExtResource("1_fev61")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1029107147]
+position = Vector2(0, -5)
+energy = 0.5
+texture = ExtResource("2_fmo00")
+texture_scale = 0.3
