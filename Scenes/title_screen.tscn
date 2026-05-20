@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://d3n8o2jjwawgm"]
+
+[ext_resource type="Script" uid="uid://d11or8mvsa7dh" path="res://src/title_screen.gd" id="1_7luok"]
+[ext_resource type="Texture2D" uid="uid://dp8mxvg8soqf8" path="res://Assets/title_screen.png" id="1_8ukxt"]
+[ext_resource type="Texture2D" uid="uid://c1a6mwlalii61" path="res://Assets/game_logo.png" id="3_rbu6d"]
+[ext_resource type="Texture2D" uid="uid://c35jhp33ib44i" path="res://Assets/game_logo1.png" id="4_mbfhq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ukxt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wtx41"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rbu6d"]
+
+[node name="Control" type="Control" unique_id=1204770852]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7luok")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1529856984]
+modulate = Color(0.73300546, 0.7330054, 0.7330054, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_8ukxt")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1756878577]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 97.0
+offset_right = 802.0
+offset_bottom = 283.0
+texture = ExtResource("3_rbu6d")
+metadata/_edit_group_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=2134867557]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 277.0
+offset_right = 777.0
+offset_bottom = 299.0
+texture = ExtResource("4_mbfhq")
+expand_mode = 1
+metadata/_edit_group_ = true
+
+[node name="StartBtn" type="Button" parent="." unique_id=1739155919]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 389.0
+offset_right = 671.0
+offset_bottom = 472.0
+theme_override_colors/font_pressed_color = Color(0.79604053, 0.111404814, 3.85046e-07, 1)
+theme_override_colors/font_hover_color = Color(0.41517568, 0.23623392, 1.92523e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ukxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wtx41")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rbu6d")
+text = "	START"
+
+[node name="ExitBtn" type="Button" parent="." unique_id=615347757]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 472.0
+offset_right = 671.0
+offset_bottom = 555.0
+theme_override_colors/font_pressed_color = Color(0.79604053, 0.111404814, 3.85046e-07, 1)
+theme_override_colors/font_hover_color = Color(0.41568628, 0.23529412, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ukxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wtx41")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rbu6d")
+text = "EXIT"
+
+[connection signal="pressed" from="StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="ExitBtn" to="." method="_on_exit_btn_pressed"]

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7aqmlvspfqbs" path="res://Assets/Character/John Gamejam - Spritesheet.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bewhse87rw35u" path="res://Assets/Character/Attack_JohnGamejam_2.png" id="2_6t5aa"]
 [ext_resource type="Script" uid="uid://bpboober30fx3" path="res://src/hitbox.gd" id="4_vgqql"]
+[ext_resource type="PackedScene" uid="uid://bkwedud77w68m" path="res://Scenes/health_bar.tscn" id="5_fkybt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("2_6t5aa")
@@ -320,7 +321,6 @@ position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1209742278]
-zoom = Vector2(0.7, 0.7)
 limit_enabled = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2127707363]
@@ -345,6 +345,10 @@ metadata/_edit_group_ = true
 
 [node name="HurtboxShape" type="CollisionShape2D" parent="Hurtbox" unique_id=1148764788]
 shape = SubResource("RectangleShape2D_vgqql")
+
+[node name="health_bar" parent="." unique_id=1691589149 instance=ExtResource("5_fkybt")]
+position = Vector2(-8, -14)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
