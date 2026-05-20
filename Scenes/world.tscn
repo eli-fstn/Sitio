@@ -18,13 +18,10 @@ script = ExtResource("1_5a7ea")
 [node name="sorted layer" type="Node2D" parent="." unique_id=1503611946]
 y_sort_enabled = true
 
-[node name="enemy3" parent="sorted layer" unique_id=220594689 instance=ExtResource("19_no8kt")]
-position = Vector2(172.75, 379)
-
-[node name="world_map" type="TileMap" parent="sorted layer/enemy3" unique_id=2063823760]
+[node name="world_map" type="TileMap" parent="sorted layer" unique_id=2063823760]
 z_index = -1
 texture_filter = 1
-position = Vector2(-173, -379)
+position = Vector2(-0.25, 0)
 tile_set = ExtResource("1_go701")
 format = 2
 layer_0/name = "Base"
@@ -39,8 +36,13 @@ layer_3/tile_data = PackedInt32Array(1245198, 131075, 4, 1310734, 3, 7, 1245197,
 layer_4/name = "Little Hill"
 layer_4/tile_data = PackedInt32Array(1572868, 65536, 1, 1572869, 65536, 1, 1572870, 65536, 1, 1572871, 65536, 1, 1572872, 65536, 1, 1703947, 65536, 1, 1703948, 65536, 1, 1703949, 65536, 1, 1703950, 65536, 1, 1703951, 65536, 1, 1703952, 65536, 1, 1703953, 65536, 1, 1638419, 65536, 1, 1638418, 65536, 1, 1703954, 131072, 1, 983061, 65536, 1, 983060, 65536, 1, 983059, 65536, 1, 917522, 65536, 1, 917521, 65536, 1, 917520, 65536, 1, 1245188, 65536, 1, 1114116, 65536, 1, 1245200, 65536, 1, 1245201, 65536, 1, 1245202, 65536, 1, 1245203, 65536, 1, 1245204, 131072, 1, 1179668, 196608, 1, 1179669, 65536, 1, 1179670, 65536, 1, 1114127, 0, 1, 1114128, 65536, 1, 1114129, 65536, 1, 589891, 65536, 1, 589892, 65536, 1, 589893, 65536, 1, 589894, 65536, 1, 589895, 65536, 1, 589896, 65536, 1, 589897, 65536, 1, 589898, 65536, 1, 589899, 65536, 1, 589900, 262144, 1, 655436, 196608, 0, 720972, 0, 1)
 
+[node name="enemy3" parent="sorted layer" unique_id=220594689 instance=ExtResource("19_no8kt")]
+position = Vector2(172.75, 379)
+motion_mode = 1
+
 [node name="enemy2" parent="sorted layer" unique_id=1586637056 instance=ExtResource("19_no8kt")]
 position = Vector2(108.5, 337)
+motion_mode = 1
 
 [node name="Player" parent="sorted layer" unique_id=753086181 instance=ExtResource("2_5a7ea")]
 position = Vector2(133.25, 234.75)
@@ -60,6 +62,8 @@ tile_set = ExtResource("1_go701")
 
 [node name="enemy" parent="sorted layer" unique_id=1726014150 instance=ExtResource("19_no8kt")]
 position = Vector2(248.5, 328.75)
+collision_layer = 130
+motion_mode = 1
 
 [node name="flowerlights" type="Node2D" parent="sorted layer" unique_id=1301500467]
 
