@@ -1,7 +1,8 @@
 extends CharacterBody2D
 class_name Enemy
 
-@export var max_health := 30
+@onready var health_bar: Node2D = $"health_bar"
+@export var max_health := 100
 @export var speed := 100.0
 
 var health := 0
@@ -16,6 +17,7 @@ func _physics_process(delta: float) -> void:
 
 func take_damage(amount):
 	health -= amount
+	health_bar.update_health(health)
 	
 	print("Enemy HP: ", health)
 
