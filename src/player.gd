@@ -24,7 +24,16 @@ func take_damage(amount):
 		
 func die():
 	print("Player died")
-	queue_free()
+	
+	# 1. Load and instance the scene
+	var death_screen_scene = load("res://Scenes/death_screen.tscn")
+	var death_screen_instance = death_screen_scene.instantiate()
+	
+	# 2. Add it to the CURRENT active scene tree so it aligns with your screen
+	get_tree().current_scene.add_child(death_screen_instance)
+	
+	# 3. Pause the game AFTER adding the child
+	get_tree().paused = true
 
 func _physics_process(_delta) -> void:
 	hitbox.monitoring = false
