@@ -4,6 +4,7 @@ const speed = 400
 var last_direction: Vector2 = Vector2.DOWN
 var hitbox_offset: Vector2
 
+@onready var sword_swing = $SwordSwing
 @onready var health_bar: Node2D = $"health_bar"
 @onready var sprite = $AnimatedSprite2D
 @onready var footsteps = $AudioStreamPlayer2D
@@ -47,7 +48,7 @@ func _physics_process(_delta) -> void:
 func attack():
 	is_attacking = true
 	hitbox.monitoring = true
-	print("attack")
+	sword_swing.play()
 	play_animation("attack", last_direction)
 
 func process_movement() -> void:
