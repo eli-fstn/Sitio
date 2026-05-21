@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cvmfn302me7g4"]
+
+[ext_resource type="Texture2D" uid="uid://mugxsspnb3rb" path="res://Assets/Character/white lady.png" id="1_2dult"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkpcf"]
+atlas = ExtResource("1_2dult")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2esmi"]
+atlas = ExtResource("1_2dult")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhb33"]
+atlas = ExtResource("1_2dult")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l54of"]
+atlas = ExtResource("1_2dult")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5kn1"]
+atlas = ExtResource("1_2dult")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivad2"]
+atlas = ExtResource("1_2dult")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5hpn"]
+atlas = ExtResource("1_2dult")
+region = Rect2(32, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1ve4"]
+atlas = ExtResource("1_2dult")
+region = Rect2(48, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ju87x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkpcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2esmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhb33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l54of")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5kn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivad2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5hpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1ve4")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uljc"]
+size = Vector2(14, 18)
+
+[node name="white_lady" type="CharacterBody2D" unique_id=541237648]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=257710162]
+sprite_frames = SubResource("SpriteFrames_ju87x")
+animation = &"idle_front"
+autoplay = "idle_front"
+frame_progress = 0.33809346
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767837377]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_1uljc")
