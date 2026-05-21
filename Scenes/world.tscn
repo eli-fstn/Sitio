@@ -4,11 +4,13 @@
 [ext_resource type="TileSet" uid="uid://cpyesg85xmu32" path="res://Assets/Tileset/config/tiles.tres" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://dll30r7u78o0n" path="res://Scenes/player.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://du67jjcoup7hi" path="res://Scenes/final_enemy.tscn" id="4_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://hguo0e6d8fnj" path="res://Scenes/EliteDuwende.tscn" id="4_7yui6"]
 [ext_resource type="AudioStream" uid="uid://cx2tbx7yxyk6m" path="res://Assets/Sound Effects/BGM/Cricket.wav" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://q2xqrdm5hd0a" path="res://Scenes/glowflowers.tscn" id="5_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://bjsskmiesxx71" path="res://Scenes/crow_area.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://cvmfn302me7g4" path="res://Scenes/white_lady.tscn" id="6_c5t2i"]
 [ext_resource type="PackedScene" uid="uid://c15fm8u3u5he1" path="res://Scenes/dog_area.tscn" id="7_o06y3"]
-[ext_resource type="Script" uid="uid://b5fp01bicc46s" path="res://src/spawn_trigger.gd" id="10_0fj1v"]
+[ext_resource type="Script" path="res://src/spawn_trigger.gd" id="10_0fj1v"]
 [ext_resource type="AudioStream" uid="uid://ctd0v7fwfepco" path="res://Assets/OST/Jungle Village  D&DTTRPG Music  1 Hour.mp3" id="11_ikia7"]
 [ext_resource type="PackedScene" uid="uid://bpjl07rgypfqi" path="res://Scenes/enemy.tscn" id="19_no8kt"]
 
@@ -41,8 +43,18 @@ layer_3/tile_data = PackedInt32Array(1245198, 131075, 4, 1310734, 3, 7, 1245197,
 layer_4/name = "Little Hill"
 layer_4/tile_data = PackedInt32Array(1572868, 65536, 1, 1572869, 65536, 1, 1572870, 65536, 1, 1572871, 65536, 1, 1572872, 65536, 1, 1703947, 65536, 1, 1703948, 65536, 1, 1703949, 65536, 1, 1703950, 65536, 1, 1703951, 65536, 1, 1703952, 65536, 1, 1703953, 65536, 1, 1638419, 65536, 1, 1638418, 65536, 1, 1703954, 131072, 1, 983061, 65536, 1, 983060, 65536, 1, 983059, 65536, 1, 917522, 65536, 1, 917521, 65536, 1, 917520, 65536, 1, 1245188, 65536, 1, 1114116, 65536, 1, 1245200, 65536, 1, 1245201, 65536, 1, 1245202, 65536, 1, 1245203, 65536, 1, 1245204, 131072, 1, 1179668, 196608, 1, 1179669, 65536, 1, 1179670, 65536, 1, 1114127, 0, 1, 1114128, 65536, 1, 1114129, 65536, 1, 589891, 65536, 1, 589892, 65536, 1, 589893, 65536, 1, 589894, 65536, 1, 589895, 65536, 1, 589896, 65536, 1, 589897, 65536, 1, 589898, 65536, 1, 589899, 65536, 1, 589900, 262144, 1, 655436, 196608, 0, 720972, 0, 1)
 
+[node name="white_lady" parent="sorted layer" unique_id=541237648 instance=ExtResource("6_c5t2i")]
+position = Vector2(1389.25, 451.5)
+collision_layer = 512
+collision_mask = 7
+
+[node name="Duwende" parent="sorted layer" unique_id=1197825434 instance=ExtResource("4_7yui6")]
+position = Vector2(1157.25, -11.5)
+scale = Vector2(0.5, 0.5)
+
 [node name="Player" parent="sorted layer" unique_id=753086181 instance=ExtResource("2_5a7ea")]
 position = Vector2(144.5, 246.25)
+collision_mask = 902
 
 [node name="world_border" type="TileMapLayer" parent="sorted layer" unique_id=502724953]
 y_sort_enabled = true
