@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bjsskmiesxx71" path="res://Scenes/crow_area.tscn" id="5_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://c15fm8u3u5he1" path="res://Scenes/dog_area.tscn" id="7_o06y3"]
 [ext_resource type="Script" uid="uid://b5fp01bicc46s" path="res://src/spawn_trigger.gd" id="10_0fj1v"]
+[ext_resource type="AudioStream" uid="uid://ctd0v7fwfepco" path="res://Assets/OST/Jungle Village  D&DTTRPG Music  1 Hour.mp3" id="11_ikia7"]
 [ext_resource type="PackedScene" uid="uid://bpjl07rgypfqi" path="res://Scenes/enemy.tscn" id="19_no8kt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikia7"]
@@ -99,6 +100,10 @@ position = Vector2(2490.25, -551.25)
 stream = ExtResource("4_8j60k")
 autoplay = true
 bus = &"Cricket_BGM"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=2098408803]
+stream = ExtResource("11_ikia7")
+autoplay = true
 
 [node name="Crow_area" parent="." unique_id=120540040 instance=ExtResource("5_fo5ed")]
 position = Vector2(1826.25, 365.75)
