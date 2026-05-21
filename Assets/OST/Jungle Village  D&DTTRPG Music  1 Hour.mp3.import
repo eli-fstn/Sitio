@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctd0v7fwfepco"
+path="res://.godot/imported/Jungle Village  D&DTTRPG Music  1 Hour.mp3-82b78899540883656c033d8c6e56e974.mp3str"
+
+[deps]
+
+source_file="res://Assets/OST/Jungle Village  D&DTTRPG Music  1 Hour.mp3"
+dest_files=["res://.godot/imported/Jungle Village  D&DTTRPG Music  1 Hour.mp3-82b78899540883656c033d8c6e56e974.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

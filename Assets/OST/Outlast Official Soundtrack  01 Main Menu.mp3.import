@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5b2nksgbjge4"
+path="res://.godot/imported/Outlast Official Soundtrack  01 Main Menu.mp3-d52ef853664a9864bef43d021757f325.mp3str"
+
+[deps]
+
+source_file="res://Assets/OST/Outlast Official Soundtrack  01 Main Menu.mp3"
+dest_files=["res://.godot/imported/Outlast Official Soundtrack  01 Main Menu.mp3-d52ef853664a9864bef43d021757f325.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

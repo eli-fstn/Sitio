@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dp8mxvg8soqf8" path="res://Assets/title_screen.png" id="1_8ukxt"]
 [ext_resource type="Texture2D" uid="uid://c1a6mwlalii61" path="res://Assets/game_logo.png" id="3_rbu6d"]
 [ext_resource type="Texture2D" uid="uid://c35jhp33ib44i" path="res://Assets/game_logo1.png" id="4_mbfhq"]
+[ext_resource type="AudioStream" uid="uid://c5b2nksgbjge4" path="res://Assets/OST/Outlast Official Soundtrack  01 Main Menu.mp3" id="5_55kwv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ukxt"]
 
@@ -109,6 +110,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_8ukxt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_wtx41")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_rbu6d")
 text = "EXIT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1905347913]
+stream = ExtResource("5_55kwv")
+autoplay = true
 
 [connection signal="pressed" from="StartBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="ExitBtn" to="." method="_on_exit_btn_pressed"]
