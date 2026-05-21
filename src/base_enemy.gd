@@ -12,11 +12,10 @@ func _ready():
 	health = max_health;
 
 func _physics_process(delta: float) -> void:
-	chase_target()
-	move_and_slide()
+	pass
 
 func take_damage(amount):
-	health -= amount
+	health -= amount * 2
 	health_bar.update_health(health)
 	
 	print("Enemy HP: ", health)

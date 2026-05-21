@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bewhse87rw35u" path="res://Assets/Character/Attack_JohnGamejam_2.png" id="2_6t5aa"]
 [ext_resource type="Script" uid="uid://bpboober30fx3" path="res://src/hitbox.gd" id="4_vgqql"]
 [ext_resource type="PackedScene" uid="uid://bkwedud77w68m" path="res://Scenes/health_bar.tscn" id="5_fkybt"]
+[ext_resource type="Script" uid="uid://be7e2lhyjiman" path="res://src/hurtbox.gd" id="5_x3wgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("2_6t5aa")
@@ -341,6 +342,7 @@ shape = SubResource("RectangleShape2D_6t5aa")
 position = Vector2(0, 2)
 collision_layer = 8
 collision_mask = 32
+script = ExtResource("5_x3wgy")
 metadata/_edit_group_ = true
 
 [node name="HurtboxShape" type="CollisionShape2D" parent="Hurtbox" unique_id=1148764788]

@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://c3odgk5bwbogr" path="res://Assets/Sound Effects/SFX/wings-flapping.wav" id="3_mv71a"]
 [ext_resource type="Script" uid="uid://be7e2lhyjiman" path="res://src/hurtbox.gd" id="4_tolcy"]
 [ext_resource type="PackedScene" uid="uid://bkwedud77w68m" path="res://Scenes/health_bar.tscn" id="5_xouri"]
-[ext_resource type="Script" uid="uid://bpboober30fx3" path="res://src/hitbox.gd" id="7_yaueb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iu5wk"]
 atlas = ExtResource("2_x106d")
@@ -393,13 +392,16 @@ size = Vector2(55, 34)
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_mvoqa")
+attack_range = null
+attack_cooldown = null
+max_health = null
+speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=177045082]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_hb0pw")
-animation = &"attack_front"
+animation = &"attack_back"
 autoplay = "walk_front"
-frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1528666103]
 position = Vector2(0, 3)
@@ -431,13 +433,11 @@ position = Vector2(-16, -21)
 scale = Vector2(1, 0.5)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1994338716]
-position = Vector2(-2, 14)
 collision_layer = 128
 collision_mask = 9
-script = ExtResource("7_yaueb")
-metadata/_edit_group_ = true
 
 [node name="HitboxShape" type="CollisionShape2D" parent="Hitbox" unique_id=47372486]
+position = Vector2(-2, 14)
 shape = SubResource("RectangleShape2D_x106d")
 
 [connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]

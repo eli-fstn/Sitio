@@ -17,7 +17,7 @@ func _ready():
 	hitbox_offset = hitbox.position
 	
 func take_damage(amount):
-	health -= amount
+	health -= amount / 4
 	health_bar.update_health(health)
 	
 	if health <= 0:
